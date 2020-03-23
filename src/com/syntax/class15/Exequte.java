@@ -6,7 +6,9 @@ public static void main(String[] args) {
 	Google sub=new Google();
 	
 	sub.larger(2, 9);
-	sub.odd(15);
+	sub.odd(1);
 	sub.poli("Bob");
+	sub.countries("Belarus");
+	
 }
 }

@@ -30,6 +30,20 @@ public class Google {
 			System.out.println(a + " is not polindrome");
 		}
 	}
-	
 
+	void countries(String country) {
+
+		switch(country.toLowerCase()) {
+		
+		case "belarus" :
+			System.out.println("Belarusian");
+			break;
+		case "uk" :
+			System.out.println("Ukrainian");
+			break;
+			default:
+				System.out.println("GO OUT!");
+		}
+		
+	}
 }
