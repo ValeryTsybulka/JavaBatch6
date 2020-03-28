@@ -1,4 +1,4 @@
-package com.syntax.class19;
+package com.syntax.class18;
 
 public class AccessL {
 	String a,b,c;
