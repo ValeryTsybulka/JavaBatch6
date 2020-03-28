@@ -1,7 +1,7 @@
 package com.syntax.class15;
 
 public class CulcTest {
-	public class CalculatorTest {
+	//public class CalculatorTest {
 
 		public static void main(String[] args) {
 
@@ -18,4 +18,4 @@ public class CulcTest {
 
 
 		}
-	}}
+	}
