@@ -4,9 +4,9 @@ public class Task1 {
 	String name;
 	int grade1, grade2, grade3;
 
-	Task1(String studentName, int studentGrade1, int studentGrade2, int studentGrade3) {
-		name = studentName;
-		grade1 = studentGrade1;
+	Task1(String name, int grade1, int studentGrade2, int studentGrade3) {
+		this.name = name;
+		this.grade1 = grade1;
 		grade2 = studentGrade2;
 		grade3 = studentGrade3;
 	}
