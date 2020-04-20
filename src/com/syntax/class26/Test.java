@@ -2,6 +2,7 @@ package com.syntax.class26;
 
 public class Test {
 	public static void main (String[] args) {
+		
 	    
 	    RegistrationClass register=new RegistrationClass();
 	    register.setUserName("Mahboob");
