@@ -14,8 +14,8 @@ public class Countries {
 		st.put("May", 31);
 		st.put("June", 30);
 		
-		System.out.println(st);
-		System.out.println(st.size());
+		//System.out.println(st);
+		//System.out.println(st.size());
 		
 			Set<Entry<String, Integer>> month=st.entrySet();
 			
