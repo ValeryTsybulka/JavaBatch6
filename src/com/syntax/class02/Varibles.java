@@ -1,30 +1,19 @@
 package com.syntax.class02;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Varibles {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException  {
 		
-	String name="Vova";
-	String LastName="Tip";
-	int grade=1;
-	String city="NY";
-	String state="NY";	
-	long phoneNumber=2233222233L;
+	String filePath="C:\\Users\\19292\\eclipse-workspace\\JavaBasics\\configs"
+			+ "\\Url.properties";
 	
-	 name="Dima";
-	 LastName="Top";
-	 grade=5;
-	 city="NY";
-	 state="NY";	
-	 phoneNumber=2233222233L;
-	 
-	 System.out.println("My name is "+name+ " and my last name is "+LastName+".");
-	 System.out.println("I live in "+city+ " state "+state +" and my phone number is "+phoneNumber+" !");
-	 
-	 
-	 
-	 
-	 
+	//System.out.println("----");
+	
+	FileInputStream fileInput=new FileInputStream(filePath);
 	}
 
 }
