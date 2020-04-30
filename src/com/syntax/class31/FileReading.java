@@ -6,20 +6,21 @@ import java.util.Properties;
 public class FileReading {
 	public static void main(String[] args) throws IOException {
 
-		String filePath="/Users/syntax/eclipse-workspace/JavaBasics/configs/configuration.properties";
-		System.out.println(filePath);
+		String filePath="C:\\Users\\19292\\eclipse-workspace\\JavaBasics\\configs"
+				+ "\\ConfigurationProperties";
+		System.out.println("1 "+filePath);
 
 		String userDirectory=System.getProperty("user.dir");
-		System.out.println(userDirectory);
+		System.out.println("2 "+userDirectory);
 
 		String username=System.getProperty("user.name");
-		System.out.println(username);
+		System.out.println("3 "+username);
 
 		String os=System.getProperty("os.name");
-		System.out.println(os);
+		System.out.println("4 "+os);
 
-		String filePath1=System.getProperty("user.dir")+"/configs/configuration.properties";
-		FileInputStream fis=new FileInputStream(filePath1);
+		String filePath1=System.getProperty("user.dir")+"\\configs\\ConfigurationProperties";
+		FileInputStream fis=new FileInputStream(filePath);
 
 		Properties prop=new Properties();
 		prop.load(fis);
