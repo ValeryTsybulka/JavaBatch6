@@ -1,4 +1,5 @@
-package com.syntax.class32;
+package com.syntax.class33;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,36 +11,33 @@ import java.util.Map;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-public class FromExelToMap {
+
+public class ProcessDFfomXL {
+
 	public static void main(String[] args) throws IOException {
-
-		String filePath = System.getProperty("user.dir") + "\\testData\\Java1.xlsx";
-		FileInputStream fis = new FileInputStream(filePath);
-
-		Workbook book = new XSSFWorkbook(fis);
-		Sheet sheet = book.getSheet("Sheet1");
-
+		String file=System.getProperty("user.dir")+"\\testData\\Java1.xlsx";
+		
+		FileInputStream fis=new FileInputStream(file);
+		Workbook book=new XSSFWorkbook(fis);
+		Sheet sheet=book.getSheet("Sheet1");
+		
 		int rows=sheet.getPhysicalNumberOfRows();
 		int cols =sheet.getRow(0).getLastCellNum();
-		System.out.println("Rows number "+rows);
-		System.out.println("Cols number "+cols);
 
-		List<Map<String, String>> listMap=new ArrayList<>();
+		List<Map<String, String>> xlData=new ArrayList<>();
 
 		for(int r=1; r<rows; r++) {
-
 			Map<String, String> map=new LinkedHashMap<>();
-
 			for(int c=0; c<cols; c++) {
 
 				String key=sheet.getRow(0).getCell(c).toString();
 				String value=sheet.getRow(r).getCell(c).toString();
 				map.put(key, value);
 			}
-
-			listMap.add(map);
+			xlData.add(map);
 		}
+		System.out.println(xlData);
 
-		System.out.println(listMap);
 	}
+
 }

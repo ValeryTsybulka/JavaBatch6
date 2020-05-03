@@ -15,13 +15,18 @@ public class ExelIntro {
 		String a = System.getProperty("user.dir");
 		System.out.println(a);
 
-		String filePath = a + "\\configs\\Test1.xlsx";
-		String filePath1 = "C:\\Users\\19292\\OneDrive\\Documents\\Test1.xlsx";
+		String filePath = a + "\\testData\\Java1.xlsx";
+		//String filePath1 = "C:\\Users\\19292\\OneDrive\\Documents\\Test2.xlsx";
 
 		FileInputStream fis = new FileInputStream(filePath);
 		Workbook wbook = new XSSFWorkbook(fis);
 		Sheet sheet = wbook.getSheet("Sheet1");
+		
 		double cellv=sheet.getRow(1).getCell(4).getNumericCellValue();
+		System.out.println("Inside try");
+		
+			
+		
 		System.out.println(cellv);
 		System.out.println((int)cellv);
 		String cellv1=sheet.getRow(1).getCell(4).toString();
@@ -39,5 +44,4 @@ public class ExelIntro {
 			System.out.println();
 		}
 	}
-
 }
