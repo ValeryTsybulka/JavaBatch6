@@ -5,27 +5,21 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class MultipleCatch {
-
+public class test1 {
 	public static void main(String[] args) {
 
 		String file = System.getProperty("user.dir") + "\\configs\\ConfigurationProperties";
-
 		try {
-			FileInputStream fis = new FileInputStream(file);// new FileNotFoundException();
-			//fis.close();
+			FileInputStream fis = new FileInputStream(file);// new FileNotFoundException
 			Properties prop = new Properties();
-			prop.load(fis);// new IOException();
+			prop.load(fis); // new IOException
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 
 		} catch (IOException e) {
 			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			System.out.println("Yra vizdoravlivai!!!");
 		}
-
-		System.out.println(" --- END OF THE PROGRAM ----------");
+System.out.println("__________________KY__KY______________________");
 	}
-
 }

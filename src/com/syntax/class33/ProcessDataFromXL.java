@@ -1,4 +1,5 @@
 package com.syntax.class33;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.Map;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 public class ProcessDataFromXL {
 	public static void main(String[] args) throws IOException {
 
@@ -21,7 +23,7 @@ public class ProcessDataFromXL {
 		int rows = sheet.getPhysicalNumberOfRows();
 		System.out.println(rows);
 		int cols = sheet.getRow(0).getLastCellNum();
-
+		System.out.println(cols);
 		List<Map<String, String>> xlData = new ArrayList<>();
 
 		for (int r = 1; r < rows; r++) {
@@ -39,7 +41,7 @@ public class ProcessDataFromXL {
 		System.out.println(xlData);
 		System.out.println(" ----- accessing each map separately -------    ");
 
-		for(Map<String, String> map:xlData) {
+		for (Map<String, String> map : xlData) {
 			System.out.println(map);
 		}
 	}

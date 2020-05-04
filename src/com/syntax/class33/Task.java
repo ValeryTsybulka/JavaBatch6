@@ -6,11 +6,13 @@ public class Task {
 	public static void main(String[] args) {
 
 		List<Exception> list = getAllExceptions();
-		//System.out.println(list.size());
+		System.out.println(list.size());
 
 		Iterator<Exception> eit = list.iterator();
 		while (eit.hasNext()) {
-			eit.next().printStackTrace();
+			String message=eit.next().getMessage();
+			System.out.println(message);
+			//eit.next().printStackTrace();
 		}
 	}
 
